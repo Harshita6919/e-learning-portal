@@ -26,12 +26,15 @@ const Login = () => {
         <Typography variant="h4" style={styles.welcomeText}>
           <h4>Welcome!</h4>
         </Typography>
-        <Typography variant="h6" style={{ color: "white" }}>
-          <h6>Don't have a account yet? </h6>
-        </Typography>
-        <Link style={{ color: "white" }} href="#">
-          Sign Up
-        </Link>
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <Typography variant="h6" style={{ color: "white" }}>
+            <h6>Don't have a account yet? </h6>
+          </Typography>
+          <Link style={{ color: "white" }} href="#">
+            Sign Up
+          </Link>
+        </div>
+
         <div style={styles.inputsBox}>
           <TextField id="username" label="User Name" style={styles.inputs1} />
           <TextField
@@ -96,17 +99,15 @@ const styles = {
   },
 
   inputs1: {
-    border: "1px solid white",
+    border: "1.5px solid white",
     width: "19rem",
     margin: "auto",
-    borderRadius: "1rem",
   },
 
   inputs2: {
-    border: "1px solid white",
+    border: "1.5px solid white",
     width: "19rem",
     margin: "auto",
-    borderRadius: "1rem",
     marginTop: "2rem",
   },
 

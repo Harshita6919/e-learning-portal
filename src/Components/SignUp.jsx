@@ -16,11 +16,6 @@ const Login = () => {
       style={styles.centerCard}
     >
       <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={styles.loginDiv}>
-        <img
-          src="Full Logo Original 1920px 3.png"
-          alt="logo"
-          style={styles.logo}
-        />
         <Typography variant="h4" style={styles.welcomeText}>
           <h4>Welcome!</h4>
         </Typography>
@@ -32,7 +27,13 @@ const Login = () => {
             <h6>Create new account </h6>
           </Typography>
           <Link
-            style={{ color: "white", marginTop: "-2rem", marginLeft: "1rem" }}
+            style={{
+              color: "white",
+              marginTop: "-2rem",
+              marginLeft: "1rem",
+              textDecoration: "underline",
+              fontWeight: "bolder",
+            }}
             href="http://localhost:3000/login"
           >
             Sign In
@@ -67,6 +68,11 @@ const Login = () => {
         </Button>
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={styles.imageDiv}>
+        <img
+          src="Full Logo Original 1920px 3.png"
+          alt="logo"
+          style={styles.logo}
+        />
         <img style={styles.image} src="Group 1.png" alt="image" />
         <Typography variant="h5" style={{ color: "#0093fb" }}>
           <h5 style={{ marginLeft: "4rem" }}>Credit Risk Management Program</h5>
@@ -87,7 +93,6 @@ const styles = {
 
   imageDiv: {
     background: "F5F5F5",
-    height: "43rem",
   },
 
   image: {
@@ -95,29 +100,27 @@ const styles = {
     marginTop: "3rem",
     height: "20rem",
     width: "20rem",
-    marginTop: "8rem",
   },
 
   loginDiv: {
     background: "#0093fb",
-    height: "43rem",
   },
 
   logo: {
-    marginLeft: "1rem",
+    marginLeft: "14rem",
     marginTop: "1rem",
   },
 
   welcomeText: {
     color: "white",
-    margin: "auto",
+    marginTop: "-2rem",
     marginLeft: "4rem",
   },
 
   inputsBox: {
     display: "flex",
     flexDirection: "column",
-    marginTop: "2rem",
+    marginTop: "1rem",
   },
 
   inputs1: {
@@ -129,7 +132,7 @@ const styles = {
   inputs2: {
     width: "19rem",
     margin: "auto",
-    marginTop: "2rem",
+    marginTop: "1rem",
   },
 
   button: {
@@ -137,8 +140,8 @@ const styles = {
     width: "19rem",
     margin: "auto",
     color: "white",
-    marginLeft: "5rem",
-    marginTop: "2.5rem",
+    marginLeft: "4.5rem",
+    marginTop: "2rem",
   },
 
   checkStat: {

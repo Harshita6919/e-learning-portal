@@ -7,9 +7,28 @@ import SidebarDashboard from "./Components/SidebarDashboard";
 import SignUp from "./Components/SignUp";
 
 function App() {
+  // return (
+  //   <Router>
+  //     <Routes>
+  //       <Route path="/login">
+  //         <Login />
+  //       </Route>
+  //       <Route path="/signUp">
+  //         <SignUp />
+  //       </Route>
+  //       <Route path="/">
+  //         <Header />
+  //         <SidebarDashboard />
+  //       </Route>
+  //     </Routes>
+  //   </Router>
+  // );
   return (
     <>
-      <Header />
+      {window.location.pathname !== "/login" &&
+      window.location.pathname !== "/signUp" ? (
+        <Header />
+      ) : null}{" "}
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />

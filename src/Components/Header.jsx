@@ -21,22 +21,28 @@ function Header() {
         >
           <img src="Full Logo Original 1920px 3.png" alt="logo" />
 
-          <TextField
-            type={"search"}
-            id="mysearch"
-            value={searchValue}
-            onChange={(e) => setsearchValue(e.target.value)}
-            label="Search in course"
-            placeholder="Search in course"
-            size="small"
-            style={{
-              width: "21rem",
-              height: "1rem",
-              marginTop: "-1.5rem",
-              marginLeft: "-13rem",
-            }}
-          ></TextField>
-          <Button variant="contained">Search</Button>
+          <div style={{ display: "flex", marginLeft: "-28rem" }}>
+            <TextField
+              type={"search"}
+              id="mysearch"
+              value={searchValue}
+              onChange={(e) => setsearchValue(e.target.value)}
+              label="Search in course"
+              placeholder="Search in course"
+              size="small"
+              style={{ width: "22rem" }}
+            ></TextField>
+            <Button
+              variant="contained"
+              style={{
+                background: "#0093fb",
+                marginLeft: "-1rem",
+                height: "2.46rem",
+              }}
+            >
+              Search
+            </Button>
+          </div>
 
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography

@@ -29,12 +29,22 @@ const Login = () => {
         <div style={{ display: "flex", flexDirection: "row" }}>
           <Typography
             variant="h6"
-            style={{ color: "white", marginTop: "-4rem", marginLeft: "4rem" }}
+            style={{
+              color: "white",
+              marginTop: "-4rem",
+              marginLeft: "4rem",
+            }}
           >
             <h6>Don't have a account yet? </h6>
           </Typography>
           <Link
-            style={{ color: "white", marginTop: "-2.1rem", marginLeft: "1rem" }}
+            style={{
+              color: "white",
+              marginTop: "-2rem",
+              marginLeft: "1rem",
+              textDecoration: "underline",
+              fontWeight: "bolder",
+            }}
             href="http://localhost:3000/signUp"
           >
             Sign Up
@@ -61,7 +71,7 @@ const Login = () => {
               Keep me logged in
             </p>
           </div>
-          <Link style={{ color: "white", marginTop: "0.7rem" }} href="#">
+          <Link style={{ color: "white", marginTop: "0.5rem" }} href="#">
             Forgot Password
           </Link>
         </div>
@@ -108,6 +118,10 @@ const styles = {
     marginLeft: "4rem",
   },
 
+  label: {
+    color: "white",
+  },
+
   inputsBox: {
     display: "flex",
     flexDirection: "column",
@@ -131,7 +145,7 @@ const styles = {
     width: "19rem",
     margin: "auto",
     color: "white",
-    marginLeft: "5rem",
+    marginLeft: "4.5rem",
     marginTop: "2.5rem",
   },
 

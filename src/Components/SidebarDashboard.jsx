@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { List } from "@mui/material";
+import { Grid, List, Typography } from "@mui/material";
 import { ListItem } from "@mui/material";
 import { ListItemIcon } from "@mui/material";
 import { ListItemText } from "@mui/material";
@@ -10,8 +10,7 @@ import { hasChildren } from "./Utils";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import CourseInfo from "./CourseInfo";
-import Dashboard from "./Dashboard"
-
+import Dashboard from "./Dashboard";
 
 export default function SidebarDashboard() {
   const [mykeys, setmykeys] = useState(1);
@@ -19,14 +18,34 @@ export default function SidebarDashboard() {
     if (e !== undefined) setmykeys(e);
   }
   return (
-    <div className="d-flex w-100">
-      <div style={{ width: "20%" }}>
-        {Sidebar.map((item, key) => (
-          <MenuItem call={mycall} value={mykeys} key={key} item={item} />
-        ))}
+    <>
+      <Grid container xs={12} sm={12} md={12} lg={8} xl={8}>
+        <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+          <img
+            src="Iconic Mark Original 1920px 1.png"
+            alt="logo"
+            style={{ marginLeft: "5rem", marginTop: "3rem" }}
+          />
+          <Typography variant="h5">
+            <h5 style={{ marginLeft: "1rem", marginTop: "0rem" }}>
+              Credit Risk Management
+            </h5>
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <div className="d-flex w-100">
+        <div style={{ width: "20%" }}>
+          {Sidebar.map((item, key) => (
+            <MenuItem call={mycall} value={mykeys} key={key} item={item} />
+          ))}
+        </div>
+        <div style={{ width: "80%" }}>
+          {mykeys === 1 && <CourseInfo />}
+          {mykeys === 2 && <Dashboard />}
+        </div>
       </div>
-      <div style={{ width: "80%" }}>{mykeys === 1 && <CourseInfo />}{mykeys === 2 && <Dashboard />}</div>
-    </div>
+    </>
   );
 }
 

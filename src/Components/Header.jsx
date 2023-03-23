@@ -29,7 +29,12 @@ function Header() {
             label="Search in course"
             placeholder="Search in course"
             size="small"
-            style={{ width: "35rem", height: "1rem" }}
+            style={{
+              width: "21rem",
+              height: "1rem",
+              marginTop: "-1.5rem",
+              marginLeft: "-13rem",
+            }}
           ></TextField>
           <Button variant="contained">Search</Button>
 
@@ -56,7 +61,7 @@ function Header() {
           <Box sx={{ flexGrow: 0 }}>
             {/* <Tooltip title="Open settings"> */}
             <IconButton sx={{ p: 0 }}>
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <Avatar alt="Remy Sharp" src="Group 310.png" />
             </IconButton>
             {/* </Tooltip> */}
           </Box>

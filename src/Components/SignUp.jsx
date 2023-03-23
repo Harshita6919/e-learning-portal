@@ -1,5 +1,5 @@
 import React from "react";
-import { Checkbox, Grid, Link, TextField, Typography } from "@mui/material";
+import { Grid, Link, TextField, Typography } from "@mui/material";
 
 import Button from "@mui/material/Button";
 
@@ -15,14 +15,12 @@ const Login = () => {
       spacing={0}
       style={styles.centerCard}
     >
-      <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={styles.imageDiv}>
-        <img src="Full Logo Original 1920px 3.png" alt="logo" />
-        <img style={styles.image} src="Group 1.png" alt="image" />
-        <Typography variant="h5" style={{ color: "#0093fb" }}>
-          <h5 style={{ marginLeft: "2rem" }}>Credit Risk Management Program</h5>
-        </Typography>
-      </Grid>
       <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={styles.loginDiv}>
+        <img
+          src="Full Logo Original 1920px 3.png"
+          alt="logo"
+          style={styles.logo}
+        />
         <Typography variant="h4" style={styles.welcomeText}>
           <h4>Welcome!</h4>
         </Typography>
@@ -31,18 +29,19 @@ const Login = () => {
             variant="h6"
             style={{ color: "white", marginTop: "-4rem", marginLeft: "4rem" }}
           >
-            <h6>Don't have a account yet? </h6>
+            <h6>Create new account </h6>
           </Typography>
           <Link
-            style={{ color: "white", marginTop: "-2.1rem", marginLeft: "1rem" }}
-            href="http://localhost:3000/signUp"
+            style={{ color: "white", marginTop: "-2rem", marginLeft: "1rem" }}
+            href="http://localhost:3000/login"
           >
-            Sign Up
+            Sign In
           </Link>
         </div>
 
         <div style={styles.inputsBox}>
-          <TextField id="username" label="User Name" style={styles.inputs1} />
+          <TextField id="email" label="Email" style={styles.inputs1} />
+          <TextField id="username" label="User Name" style={styles.inputs2} />
           <TextField
             id="outlined-password-input"
             label="Password"
@@ -50,20 +49,13 @@ const Login = () => {
             autoComplete="current-password"
             style={styles.inputs2}
           />
-        </div>
-
-        <div style={styles.checkStat}>
-          <div style={styles.checkBox}>
-            <Checkbox size="small" style={{ color: "white" }} />
-            <p
-              style={{ color: "white", marginTop: "-2rem", marginLeft: "2rem" }}
-            >
-              Keep me logged in
-            </p>
-          </div>
-          <Link style={{ color: "white", marginTop: "0.7rem" }} href="#">
-            Forgot Password
-          </Link>
+          <TextField
+            id="outlined-password-input"
+            label="Confirm Password"
+            type="password"
+            autoComplete="current-password"
+            style={styles.inputs2}
+          />
         </div>
 
         <Button
@@ -71,8 +63,14 @@ const Login = () => {
           style={styles.button}
           href="http://localhost:3000/dasboard"
         >
-          Login
+          Sign Up
         </Button>
+      </Grid>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={styles.imageDiv}>
+        <img style={styles.image} src="Group 1.png" alt="image" />
+        <Typography variant="h5" style={{ color: "#0093fb" }}>
+          <h5 style={{ marginLeft: "4rem" }}>Credit Risk Management Program</h5>
+        </Typography>
       </Grid>
     </Grid>
   );
@@ -89,6 +87,7 @@ const styles = {
 
   imageDiv: {
     background: "F5F5F5",
+    height: "43rem",
   },
 
   image: {
@@ -96,10 +95,17 @@ const styles = {
     marginTop: "3rem",
     height: "20rem",
     width: "20rem",
+    marginTop: "8rem",
   },
 
   loginDiv: {
     background: "#0093fb",
+    height: "43rem",
+  },
+
+  logo: {
+    marginLeft: "1rem",
+    marginTop: "1rem",
   },
 
   welcomeText: {

@@ -4,6 +4,7 @@ import Home from "./Components/Home";
 import Login from "./Components/Login";
 import Header from "./Components/Header";
 import SidebarDashboard from "./Components/SidebarDashboard";
+import SignUp from "./Components/SignUp";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/dasboard" element={<SidebarDashboard />} />
-
+          <Route exact path="/signUp" element={<SignUp />} />
         </Routes>
       </Router>
     </>

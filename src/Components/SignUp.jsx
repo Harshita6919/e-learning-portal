@@ -2,8 +2,9 @@ import React from "react";
 import { Grid, Link, TextField, Typography } from "@mui/material";
 
 import Button from "@mui/material/Button";
+import { width } from "@mui/system";
 
-const Login = () => {
+const signUp = () => {
   return (
     <Grid
       container
@@ -29,7 +30,7 @@ const Login = () => {
           <Link
             style={{
               color: "white",
-              marginTop: "-2rem",
+              marginTop: "-2.2rem",
               marginLeft: "1rem",
               textDecoration: "underline",
               fontWeight: "bolder",
@@ -73,37 +74,46 @@ const Login = () => {
           alt="logo"
           style={styles.logo}
         />
-        <img style={styles.image} src="Group 1.png" alt="image" />
-        <Typography variant="h5" style={{ color: "#0093fb" }}>
-          <h5 style={{ marginLeft: "4rem" }}>Credit Risk Management Program</h5>
+        <img style={styles.image} src="g8.png" alt="image" />
+        <Typography
+          variant="h6"
+          style={{
+            color: "#043152",
+            marginLeft: "4rem",
+            marginTop: "0rem",
+            fontWeight: "600",
+          }}
+        >
+          Credit Risk Management Program
         </Typography>
       </Grid>
     </Grid>
   );
 };
 
-export default Login;
+export default signUp;
 
 const styles = {
   centerCard: {
     margin: "auto",
     marginTop: "3rem",
-    marginBottom: "3rem",
+    marginBottom: "2rem",
+    height: "35rem",
   },
 
   imageDiv: {
-    background: "F5F5F5",
+    background: "#D7EDFD",
   },
 
   image: {
-    margin: "3rem",
+    height: "18rem",
+    width: "26rem",
     marginTop: "3rem",
-    height: "20rem",
-    width: "20rem",
+    marginLeft: "1rem",
   },
 
   loginDiv: {
-    background: "#0093fb",
+    background: "linear-gradient(#0093FF, #043152)",
   },
 
   logo: {
@@ -113,7 +123,7 @@ const styles = {
 
   welcomeText: {
     color: "white",
-    marginTop: "-2rem",
+    marginTop: "-1rem",
     marginLeft: "4rem",
   },
 
@@ -153,5 +163,11 @@ const styles = {
 
   checkBox: {
     display: "flex !important",
+  },
+
+  "@media (min-width: 414px) and (max-width: 896px)": {
+    imageDiv: {
+      display: "none",
+    },
   },
 };

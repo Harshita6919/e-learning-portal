@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+label[data-shrink="false"]
+  + .MuiInputBase-formControl
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  color: white !important;
+  border: 1px solid !important;
+  border-radius: 4px !important;
+}
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  color: white !important;
+}
+label[data-shrink="false"]
+  + .MuiInputBase-formControl
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input
+  :hover {
+  color: white !important;
+  border: 1px solid !important;
+  border-radius: 4px !important;
+}
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #ffffff !important;
+}
+
+.BasicSlideBorder {
+  background-color: #000;
+  left: 0px !important;
+}
+
+.FishBowlPanel {
+  /* background-color: #000000; */
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  background: white !important;
+}

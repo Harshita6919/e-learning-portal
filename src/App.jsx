@@ -5,7 +5,8 @@ import Login from "./Components/Login";
 import Header from "./Components/Header";
 import SidebarDashboard from "./Components/SidebarDashboard";
 import SignUp from "./Components/SignUp";
-
+import FlipLogin from "./Components/FlipLogin";
+import Test from "./Components/Test";
 function App() {
   // return (
   //   <Router>
@@ -35,6 +36,8 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/dasboard" element={<SidebarDashboard />} />
           <Route exact path="/signUp" element={<SignUp />} />
+          <Route exact path="/fliplogin" element={<FlipLogin />} />
+          <Route exact path="/test" element={<Test />} />
         </Routes>
       </Router>
     </>

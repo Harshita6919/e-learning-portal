@@ -25,37 +25,38 @@ export default function SidebarDashboard() {
   }
   return (
     <>
-      <Grid container xs={12} sm={12} md={12} lg={8} xl={8}>
-        <Grid item xs={2} sm={2} md={3} lg={4} xl={6}>
-          <img
-            src="Iconic Mark Original 1920px 1.png"
-            alt="logo"
-            style={{ marginLeft: "5rem", marginTop: "3rem" }}
-          />
-          <Typography variant="h5">
-            <h5
-              style={{
-                marginLeft: "1rem",
-                marginTop: "0rem",
-                width: "20rem",
-              }}
-            >
-              Credit Risk Management
-            </h5>
-          </Typography>
-        </Grid>
-
-        {Sidebar.map((item, key) => (
-          <MenuItem call={mycall} value={mykeys} key={key} item={item} />
-        ))}
-        {/* <div style={{ width: "80%", marginLeft: "2%" }}> */}
-        <Grid item xs={2} sm={2} md={3} lg={4} xl={6} ml={8} mt={-30}>
+      <div style={{ display: "flex" }}>
+        <div style={{ width: "20%" }}>
+          <Grid container xs={12} sm={12} md={12} lg={8} xl={8}>
+            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+              <img
+                src="Iconic Mark Original 1920px 1.png"
+                alt="logo"
+                style={{ marginLeft: "5rem", marginTop: "3rem" }}
+              />
+              <Typography variant="h5">
+                <h5
+                  style={{
+                    marginLeft: "1rem",
+                    marginTop: "0rem",
+                    width: "20rem",
+                  }}
+                >
+                  Credit Risk Management
+                </h5>
+              </Typography>
+            </Grid>
+          </Grid>
+          {Sidebar.map((item, key) => (
+            <MenuItem call={mycall} value={mykeys} key={key} item={item} />
+          ))}
+        </div>
+        <div style={{ width: "80%", marginLeft: "2%" }}>
           {mykeys === 1 && <CourseInfo />}
           {mykeys === 2 && <Module1 />}
           {mykeys === 3 && <Module2 />}
-          {/* </div> */}
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     </>
   );
 }

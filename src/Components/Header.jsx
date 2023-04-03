@@ -13,7 +13,12 @@ import { TextField } from "@mui/material";
 function Header() {
   const [searchValue, setsearchValue] = useState("");
   return (
-    <AppBar position="static" sx={{ background: "white" }}>
+    <AppBar
+      position="static"
+      sx={{
+        background: "#ffffff",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
@@ -70,6 +75,19 @@ function Header() {
               <Avatar alt="Remy Sharp" src="Group 310.png" />
             </IconButton>
             {/* </Tooltip> */}
+            <a
+              style={{
+                textDecoration: "none",
+                marginLeft: "1rem",
+                marginRight: "1rem",
+                fontWeight: "600",
+                fontSize: "16px",
+                color: "#0093fb",
+              }}
+              href="http://localhost:3000/login"
+            >
+              Logout
+            </a>
           </Box>
         </Toolbar>
       </Container>
